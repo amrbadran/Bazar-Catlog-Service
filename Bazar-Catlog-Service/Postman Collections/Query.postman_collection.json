@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "228838f4-1838-48f9-9088-8a46a3112c63",
+		"name": "Query",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39143337"
+	},
+	"item": [
+		{
+			"name": "Query Books By Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/books/search/undergraduate school",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"search",
+						"undergraduate school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info Book By Id Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/books/info/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"info",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

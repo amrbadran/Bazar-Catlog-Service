@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "2ae871a5-2985-4132-9f20-9c4d8fff1313",
+		"name": "Update",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39143337"
+	},
+	"item": [
+		{
+			"name": "Update Cost Book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cost\" : 25\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/books/cost/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"cost",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Increase Or Decrease Book Stock",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"decrease\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/books/stock/3",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"books",
+						"stock",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
