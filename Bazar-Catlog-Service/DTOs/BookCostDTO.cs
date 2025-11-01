@@ -2,5 +2,5 @@
 
 public class BookCostDTO
 {
-    public decimal Cost { get; set; }
+    public decimal? Cost { get; set; }
 }

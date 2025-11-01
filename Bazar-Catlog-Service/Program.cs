@@ -11,6 +11,7 @@ builder.Services.AddDbContext<BazarDbContext>(options => options.UseSqlite("Data
 var app = builder.Build();
 
 app.MapQueryBooksEndpoints();
+app.MapUpdateBooksEndpoints();
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
