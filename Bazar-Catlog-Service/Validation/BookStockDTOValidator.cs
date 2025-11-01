@@ -20,11 +20,6 @@ public class BookStockDTOValidator : IValidator
         {
             throw new Exception("increae or decrease must have a value");
         }
-        if (increae > decrease)
-        {
-            throw new Exception("Increase and decrease book stock exceed");
-        }
-
         if (increae.HasValue && increae.Value < 0)
         {
             throw new Exception("Increase is negative");
