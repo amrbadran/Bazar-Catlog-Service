@@ -9,12 +9,12 @@ public static class QueryBooks
 {
     public static void MapQueryBooksEndpoints(this WebApplication app)
     {
-        app.MapGet("/search/{topicName}", async (string topicName, BazarDbContext db) =>
+        app.MapGet("books/search/{topicName}", async (string topicName, BazarDbContext db) =>
         {
             return await db.Books.Where(b => b.Topic == topicName).ToListAsync();
         });
 
-        app.MapGet("/info/{bookNumber}", async (int bookNumber, BazarDbContext db) =>
+        app.MapGet("books/info/{bookNumber}", async (int bookNumber, BazarDbContext db) =>
         {
             return await db.Books.Where(b => b.Id == bookNumber).FirstOrDefaultAsync();
         });
