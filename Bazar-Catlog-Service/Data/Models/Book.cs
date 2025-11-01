@@ -1,4 +1,4 @@
-﻿namespace Bazar.Data.Models;
+﻿namespace Bazar_Catlog_Service.Data.Models;
 
 public class Book
 {

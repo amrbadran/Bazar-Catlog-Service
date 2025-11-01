@@ -1,7 +1,7 @@
-﻿using Bazar.Data.Models;
+﻿using Bazar_Catlog_Service.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Bazar.Data;
+namespace Bazar_Catlog_Service.Data;
 
 public class BazarDbContext : DbContext
 {

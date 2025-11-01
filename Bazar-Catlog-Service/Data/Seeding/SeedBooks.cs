@@ -1,6 +1,7 @@
-﻿using Bazar.Data.Models;
+﻿using Bazar_Catlog_Service.Data.Models;
+using Bazar_Catlog_Service.Data;
 
-namespace Bazar.Data.Seeding;
+namespace Bazar_Catlog_Service.Data.Seeding;
 
 public class SeedBooks : IDisposable
 {
