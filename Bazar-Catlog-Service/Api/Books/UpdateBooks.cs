@@ -69,6 +69,8 @@ public static class UpdateBooks
             {
                 book.NumberOfItems -= decrease.Value;
             }
+
+            if (book.NumberOfItems < 0) throw new Exception("Number Of Items Will Be Negative");
             await db.SaveChangesAsync();
             return Results.Ok();
         }
