@@ -33,7 +33,10 @@ public static class UpdateBooks
                 }
                 catch (Exception ex)
                 {
-                    return Results.BadRequest(ex.Message);
+                    return Results.BadRequest(new
+                    {
+                        message = ex.Message
+                    });
                 }
             });
     }
