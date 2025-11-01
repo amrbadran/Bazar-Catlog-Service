@@ -6,10 +6,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <AssemblyName>Bazar-Catlog-Service</AssemblyName>
-        <RootNamespace>Bazar-Catlog-Service</RootNamespace>
+        <RootNamespace>Bazar_Catlog_Service</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.7" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
     </ItemGroup>
 

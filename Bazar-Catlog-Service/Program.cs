@@ -1,13 +1,16 @@
-﻿// Test Seeding Books
+﻿using Bazar_Catlog_Service.Api.Books;
+using Bazar_Catlog_Service.Data;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
-using Bazar.Data;
-using Bazar.Data.Seeding;
+var builder = WebApplication.CreateBuilder();
 
-var context = new BazarDbContext();
-using var seedBooks = new SeedBooks(context);
-seedBooks.Seed();
+builder.Services.AddDbContext<BazarDbContext>(options => options.UseSqlite("Data Source=Bazar.db"));
 
-foreach (var book in context.Books)
-{
-    Console.WriteLine(book.BookName);
-}
+var app = builder.Build();
+
+app.MapQueryBooksEndpoints();
+app.MapGet("/", () => "Hello World!");
+
+app.Run();
