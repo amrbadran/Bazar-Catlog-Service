@@ -16,7 +16,7 @@ public static class QueryBooks
 
         app.MapGet("/info/{bookNumber}", async (int bookNumber, BazarDbContext db) =>
         {
-            return await db.Books.Where(b => b.Id == bookNumber).ToListAsync();
+            return await db.Books.Where(b => b.Id == bookNumber).FirstOrDefaultAsync();
         });
     }
 }
