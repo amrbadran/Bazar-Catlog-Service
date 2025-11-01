@@ -9,6 +9,14 @@ public class BazarDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data Source=Bazar.db");
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlite("Data Source=Bazar.db");
+        }
+    }
+
+    public BazarDbContext(DbContextOptions options) : base(options)
+    {
+        
     }
 }
